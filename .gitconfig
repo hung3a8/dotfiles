@@ -1,0 +1,21 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = hung3a8
+	email = hung3a8@gmail.com
+[init]
+	defaultBranch = master
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[core]
+	editor = code --wait
+[alias]
+	co = checkout
+	lol = log --oneline
+	ss = status --short
+	upstream = !git push -u origin HEAD
+[advice]
+	addIgnoredFile = false
